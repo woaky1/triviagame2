@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wizard Quiz</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bilbo|IM+Fell+English+SC&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div>
+                <h1 class="text-center" id="gameTitle">Magic User Quiz</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="startScreen">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 pt-3">
+                    <h2 class="startScreenText">Hail, Adventurer!</h2>
+                    <p class="startScreenText">Test your knowledge of how spells work in Dungeons and Dragons.</p>
+                    <p class="startScreenText">You have 120 seconds to complete this task.</p>
+                    <p class="startScreenText">Good luck...</p>
+                    <button type="button" class="btn btn-warning float-right mb-3 mr-3 startScreenText" id="start">Start!</button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <div class="disappear" id="quiz">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Time Remaining: <span id="onscreenTimer">120</span></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="text-center" id="q1">What school of magic does the spell <span class="red">Burning Hands</span> belong to?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question1" autocomplete="off" value="incorrect"> Necromancy
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question1" autocomplete="off" value="correct"> Evocation
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question1" autocomplete="off" value="incorrect"> Conjuration
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question1" autocomplete="off" value="incorrect"> Enchantment
+                        </label>
+                    </div>
+                    <h2 class="text-center" id="q2">Which of these spells can a ranger <span class="red">not</span> cast?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question2" autocomplete="off" value="incorrect"> Wind Wall
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question2" autocomplete="off" value="incorrect"> Silence
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question2" autocomplete="off" value="correct"> Meld Into Stone
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question2" autocomplete="off" value="incorrect"> Nondetection
+                        </label>
+                    </div>
+                    <h2 class="text-center" id="q3">What is the duration for the spell <span class="red">Haste</span>?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question3" autocomplete="off" value="incorrect"> 1 round
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question3" autocomplete="off" value="incorrect"> 1 hour
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question3" autocomplete="off" value="incorrect"> Until your next rest
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question3" autocomplete="off" value="correct"> 1 minute
+                        </label>
+                    </div>
+                    <h2 class="text-center" id="q4">Which of these spell components can <span class="red">not</span> be used to cast <span class="red">Sleep</span>?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question4" autocomplete="off" value="correct"> a Feather
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question4" autocomplete="off" value="incorrect"> a Pinch of Sand
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question4" autocomplete="off" value="incorrect"> Rose Petals
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question4" autocomplete="off" value="incorrect"> a Cricket
+                        </label>
+                    </div>
+                    <h2 class="text-center" id="q5">Which cleric domain can cast <span class="red">Pass Without A Trace</span>?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question5" autocomplete="off" value="incorrect"> Nature
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question5" autocomplete="off" value="incorrect"> Light
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question5" autocomplete="off" value="correct"> Trickery
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question5" autocomplete="off" value="incorrect"> War
+                        </label>
+                    </div>
+                    <h2 class="text-center" id="q6">Wizards who specialize in <span class="red">Abjuration</span> magic are called?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question6" autocomplete="off" value="incorrect"> Abjustices
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question6" autocomplete="off" value="incorrect"> Abjurators
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question6" autocomplete="off" value="incorrect"> Abjurists
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question6" autocomplete="off" value="correct"> Abjurers
+                        </label>
+                    </div>
+                    <h2 class="text-center" id="q7">What's the highest spell level an <span class="red">Eldritch Knight</span> can cast?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question7" autocomplete="off" value="incorrect"> Third
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question7" autocomplete="off" value="correct"> Fourth
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question7" autocomplete="off" value="incorrect"> Fifth
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question7" autocomplete="off" value="incorrect"> Sixth
+                        </label>
+                    </div>
+                    <h2 class="text-center" id="q8">What is the source of <span class="red">Sorcerers'</span> magic?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question8" autocomplete="off" value="incorrect"> Another dimension
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question8" autocomplete="off" value="correct"> Themselves
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question8" autocomplete="off" value="incorrect"> The God of Magic
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question8" autocomplete="off" value="incorrect"> Crystals
+                        </label>
+                    </div>
+                    <h2 class="text-center" id="q9">What is the spellcasting ability for a <span class="red">Paladin</span>?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question9" autocomplete="off" value="incorrect"> Intelligence
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question9" autocomplete="off" value="incorrect"> Wisdom
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question9" autocomplete="off" value="incorrect"> Mana
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question9" autocomplete="off" value="correct"> Charisma
+                        </label>
+                    </div>
+                    <h2 class="text-center" id="q10">Which of these magic items <span class="red">isn't</span> found in the <span class="red">Dungeon Master's Guide</span>?</h2>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question10" autocomplete="off" value="incorrect"> Deck of Many Things
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question10" autocomplete="off" value="correct"> Hat of Rabbits
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question10" autocomplete="off" value="incorrect"> Bag of Holding
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question10" autocomplete="off" value="incorrect"> Chime of Opening
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center mb-3">
+                    <button type="button" class="btn btn-primary" id="gradeMe">I'm done!</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="disappear" id="endScreen">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 text-center">
+                    <h2>All Done!</h2>
+                    <h3>Correct Answers: <span id="correct_num"></span></h3>
+                    <h3>Incorrect Answers: <span id="incorrect_num"></span></h3>
+                    <h3>Unanswered Questions: <span id="unanswered_num"></span></h3>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>

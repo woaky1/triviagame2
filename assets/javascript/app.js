@@ -57,32 +57,42 @@ function displayQuestion(i) {
 }
 displayQuestion(QuestionIndex);
 
-// $("#option1"||"#option2"||"#option3"||"#option4").on("click", )
+$("#option1, #option2, #option3, #option4").on("click", function(){
+    console.log(this);
+    grade();
+    console.log(numAnsweredCorrect);
+    displayQuestion(QuestionIndex);
+});
+
 function grade() {
+    if ((this).attr("val") = "correct") {
+        numAnsweredCorrect++;
+    }
+
 // Learned how to loop through and grab the checked button values from one of the answers here: https://stackoverflow.com/questions/45848618/how-to-check-the-values-of-multiple-dynamic-radio-buttons-in-a-form-using-jquery
     
-    if (graded === false) {
-        $('input[type=radio]:checked').each(function() {
-            userAnswers.push(this.value);
-        });
-        for(var i = 0; i < numberOfQuestions; i++) {
-            if (userAnswers[i] === "correct") {
-                numAnsweredCorrect++;
-            } else if (userAnswers[i] === "incorrect") {
-                numAnsweredIncorrect++;
-            }
-        }
-        unansweredQuestions = numberOfQuestions - userAnswers.length;
-        $("#correct_num").html(numAnsweredCorrect);
-        $("#incorrect_num").html(numAnsweredIncorrect);
-        $("#unanswered_num").html(unansweredQuestions);
-        $("#quiz").addClass("disappear");
-        $("#endScreen").removeClass("disappear");
-    };
-    graded = true;
+    // if (graded === false) {
+    //     $('input[type=radio]:checked').each(function() {
+    //         userAnswers.push(this.value);
+    //     });
+    //     for(var i = 0; i < numberOfQuestions; i++) {
+    //         if (userAnswers[i] === "correct") {
+    //             numAnsweredCorrect++;
+    //         } else if (userAnswers[i] === "incorrect") {
+    //             numAnsweredIncorrect++;
+    //         }
+    //     }
+    //     unansweredQuestions = numberOfQuestions - userAnswers.length;
+    //     $("#correct_num").html(numAnsweredCorrect);
+    //     $("#incorrect_num").html(numAnsweredIncorrect);
+    //     $("#unanswered_num").html(unansweredQuestions);
+    //     $("#quiz").addClass("disappear");
+    //     $("#endScreen").removeClass("disappear");
+    // };
+    // graded = true;
 }
 
-$("#gradeMe").on("click", function(){
-    time = 0;
-    grade();
-})
+// $("#gradeMe").on("click", function(){
+//     time = 0;
+//     grade();
+// })
